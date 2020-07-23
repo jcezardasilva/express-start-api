@@ -1,0 +1,42 @@
+{
+  "name": "express-start-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "docs": "node_modules/.bin/jsdoc -c jsdoc.json & npm run complexity",
+    "test": "nyc --reporter=html --report-dir=coverage --reporter=text mocha & npm run complexity",
+    "complexity": "./node_modules/.bin/es6-plato -r -d ./complexity api"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jcezardasilva/express-start-api.git"
+  },
+  "author": "julio cezar da silva",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jcezardasilva/express-start-api/issues"
+  },
+  "homepage": "https://github.com/jcezardasilva/express-start-api#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^3.23.3",
+    "mongoose": "^5.9.25",
+    "morgan": "^1.10.0",
+    "superagent": "^5.3.1",
+    "uuid": "^8.2.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "es6-plato": "^1.2.3",
+    "jsdoc": "^3.6.5",
+    "mocha": "^8.0.1",
+    "nyc": "^15.1.0",
+    "tui-jsdoc-template": "^1.2.2"
+  }
+}
