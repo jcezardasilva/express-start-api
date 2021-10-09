@@ -1,13 +1,13 @@
 {
-  "name": "express-start-api",
-  "version": "1.0.0",
-  "description": "",
+  "name": "@jcezardasilva/express-start-api",
+  "description": "a template for start a new application with express",
+  "version": "1.0.1",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "docs": "node_modules/.bin/jsdoc -c jsdoc.json & npm run complexity",
+    "docs": "jsdoc -c jsdoc.json & npm run complexity",
     "test": "nyc --reporter=html --report-dir=coverage --reporter=text mocha & npm run complexity",
-    "complexity": "./node_modules/.bin/es6-plato -r -d ./complexity api"
+    "complexity": "es6-plato -r -d ./complexity api"
   },
   "repository": {
     "type": "git",
